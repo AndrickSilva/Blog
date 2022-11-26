@@ -11,7 +11,7 @@ const Footer = () => {
                 <BsLinkedin />
                 <BsFacebook />
             </div>
-            <p className=''> {"</>"} Andrick Silva</p>
+            <p className='mb-0 fw-bold'> {"</>"} by Andrick Silva</p>
         </div>
     )
 }
