@@ -7,9 +7,9 @@ const ViewMore = () => {
             <div className="fs-1 fw-bolder my-4 text-center ">First featurette heading. It’ll blow your mind.</div>
             <img className='rounded-1 align-self-center mb-2' height="500px" width="800px" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" alt="" />
             <div className="d-flex fs-3 gap-4 justify-content-center mb-5" >
-                <a style={{color: "#006B5F"}} href=""><FaRegHeart /></a>
-                <a style={{color: "#006B5F"}} href=""><FaRegComment /></a>
-                <a style={{color: "#006B5F"}} href=""><FaRegPaperPlane /></a>
+                <a style={{color: "#006B5F"}} href="#"><FaRegHeart /></a>
+                <a style={{color: "#006B5F"}} href="#"><FaRegComment /></a>
+                <a style={{color: "#006B5F"}} href="#"><FaRegPaperPlane /></a>
             </div>
             <div className="container w-75 ">
                 <h2 className='fw-bold my-4 text-left'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, esse!</h2>
