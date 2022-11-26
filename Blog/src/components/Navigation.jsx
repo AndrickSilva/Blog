@@ -10,7 +10,7 @@ const Navigation = () => {
             <ul>
                 <li><NavLink to="/" >Home</NavLink></li>
                 <li><NavLink to="/Blog">Blogs</NavLink></li>
-                <li><NavLink to="/About">Contact</NavLink></li>
+                <li><NavLink to="/Contact">Contact</NavLink></li>
             </ul>
             <Link to="/Login" className='btn btn-light fw-bold px-4 py-2 align-self-center' style={{height: "fit-content",  }}>Login</Link>
         </nav>
