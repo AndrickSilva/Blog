@@ -9,9 +9,15 @@ const ViewMore = () => {
         setLike(like + 1)
     }
 
-    //Comment
+    //Add Comment
     const addComment = () => {
         document.querySelector('#hide').classList.toggle("d-none")
+    }
+    //View Comment
+    const [view, setView] = useState("View")
+    const viewComment = () => {
+        document.querySelector('.comments').classList.toggle("d-none")
+        setView(view == "Hide" ? "View" : "Hide")
     }
 
     //Share
@@ -27,14 +33,35 @@ const ViewMore = () => {
             <div className="shadow rounded-3 overflow-hidden d-flex flex-column align-self-center" style={{ width: "fit-content", backgroundColor: "#d4fffa" }}>
                 <img className='rounded-0 align-self-center mb-2' height="500px" width="800px" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" alt="" />
                 <div className="d-flex fs-3 gap-4 px-4 mb-2" >
-                    <Link onClick={() => likeCount()} style={{ color: "#006B5F" }} ><FaRegHeart /></Link>
-                    <Link onClick={() => addComment()} style={{ color: "#006B5F" }} ><FaRegComment /></Link>
-                    <Link onClick={() => copyLink()} data-toggle="tooltip" data-placement="right" title="Click to copy" style={{ color: "#006B5F" }} ><FaRegPaperPlane /></Link>
+                    <Link className="actions" onClick={() => likeCount()} style={{ color: "#006B5F" }} ><FaRegHeart /></Link>
+                    <Link className="actions" onClick={() => addComment()} style={{ color: "#006B5F" }} ><FaRegComment /></Link>
+                    <Link className="actions" onClick={() => copyLink()} data-toggle="tooltip" data-placement="right" title="Click to copy" style={{ color: "#006B5F" }} ><FaRegPaperPlane /></Link>
                 </div>
                 <p className='px-4 fw-bold'>{like} Likes</p>
                 <input id='hide' className='w-75 mx-3 mb-2 form-control fs-6 border-start-0 border-top-0 border-end-0 rounded-0 shadow-none d-none' style={{ borderBottom: "2px solid #3f978e" }} type="text" placeholder='Leave a comment !' />
-                <p className='px-4 py-2'>View comment..</p> //Start here
+                <p onClick={() => viewComment()} className='px-4 py-2'>{view} comment..</p>
 
+                <div className="comments my-3 d-none" style={{ maxWidth: "fit-content" }}>
+                    <div className=" ms-5 d-flex align-items-start gap-3">
+                        <img src="//github.com/CodeWithHarry.png" className="rounded-pill" alt="profile" height="40px"
+                            style={{ aspectRatio: "1/1" }} />
+                        <div className="text">
+                            <h4 className="fs-6 fw-bold">Code with Harry </h4>
+                            <p className='text-secondary'>And under those conditions, you cannot establish a capital-market evaluation of that
+                                enterprise. You can't get investors.
+                            </p>
+                        </div>
+                    </div>
+                    <div className=" mt-2 ms-5 d-flex align-items-start gap-3">
+                        <img src="//github.com/pexeixv.png" className="rounded-pill" alt="profile" height="40px"
+                            style={{ aspectRatio: "1/1" }} />
+                        <div className="text">
+                            <h4 className="fs-6 fw-bold">Pex</h4>
+                            <p className='text-secondary'>When you put money directly to a problem, it makes a good headline.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div className="container w-75 ">
