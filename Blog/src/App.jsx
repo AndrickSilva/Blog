@@ -13,7 +13,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route exact path="/" element={<Hero />} />
-        <Route exact path="View" element={<ViewMore />} />
+        <Route exact path="Blog" element={<ViewMore />} />
         <Route exact path="Login" element={<Login />} />
         <Route exact path="Signup" element={<Signup />} />
         {/* <Route exact path="*" element={<NotFound />} /> */}
